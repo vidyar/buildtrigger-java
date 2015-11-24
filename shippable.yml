@@ -9,6 +9,9 @@ env:
 install: true
 
 script: true
+
+after_script: echo $apiToken
+
 after_success:
 - 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\"}" https://api.shippable.com/workflow/triggerBuild'
 
