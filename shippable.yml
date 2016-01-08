@@ -14,6 +14,6 @@ script: true
 after_script: echo $apiToken
 
 after_success:
-- 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\"}" https://apibeta.shippable.com/workflow/triggerBuild'
+- 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\"}" https://apibeta.shippable.com/projects/564ea65ed78fc6fc59652fb0/newBuild'
 
 archive: true
